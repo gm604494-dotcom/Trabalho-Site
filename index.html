@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Protótipo com Animação</title>
+  <title>Portfólio Guilherme M</title>
  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <h1 class="page-title">Portfólio Virtual</h1>
 
-  <div class="nav">  <!-- abaixo encontra-se os blocos que usei para fazer o display de cada informação que foi pedida-->
+  <div class="nav"> 
     <div class="block" data-target="sobre">Sobre Mim</div>
     <div class="block" data-target="Formação">Formação</div>
     <div class="block" data-target="Portfólio">Portfólio</div>
@@ -23,7 +23,7 @@
         Como hobbies principais posso mencionar artes marciais, especificamente o Muay Thai, que amo praticar toda semana, também tenho grande interesse em livros e jogos
         (especificamente de ficção científica e terror), e amo cozinhar! Sempre que consigo, claro.
         <p>Me considero como uma pessoa reservada, mas ainda sim, extrovertida, amo sair para conhecer pessoas novas e praticar esportes ao ar livre sempre que posso.</p> 
-        <p>Sempre tive uma grande paixão e contato constante com tecnologia, e senti que finalmente deveria me aprofundar nesta área, que tanto me encanta hoje em dia!</p>
+        
   </div>
 
   <div id="Formação" class="content-block">
@@ -35,14 +35,14 @@
   
   </div>
 
-  <div id="Portfólio" class="content-block">  <!--Meus trabalhos práticos são feitos em dois ambientes diferentes, infelizmente não mantive meus projetos anteriores-->
+  <div id="Portfólio" class="content-block">  
     <p>Minha conta do Github: https://github.com/gm604494-dotcom</p>
     <p>Abaixo você poderá encontrar links para todos os meus projetos anteriores e protótipos:</p> 
     <p>https://gm604494-dotcom.github.io/Prototipo-trabalho</p>
     <p>https://gm604494-dotcom.github.io/GuilhermeMM/</p>
   </div>
 
-  <div id="Contato" class="content-block"> <!--layout para o envio fictício de um email por via de contato-->
+  <div id="Contato" class="content-block"> 
     <p>Meu email de contato pessoal é: gm604494@gmail.com, e meu número para contato é 33987628674.</p>
     <form class="contact-form">
   <label for="name">Seu Nome:</label>
@@ -58,7 +58,7 @@
 </form>
   </div>
 
-  <!--preferi por utilizar o script dentro do html-->
+
   <script>
     const blocks = document.querySelectorAll('.block');
     const contents = document.querySelectorAll('.content-block');
@@ -68,8 +68,7 @@
   alert('Mensagem enviada!');
   this.reset(); // limpa
 });
-//quando um bloco é clicado, mostra o seu conteúdo e esconde o resto. 
-//quando outro é clicado, esconde o anterior.
+
     blocks.forEach(block => {
       block.addEventListener('click', () => {
         const targetId = block.getAttribute('data-target');
