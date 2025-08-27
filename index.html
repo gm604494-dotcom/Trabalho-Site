@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Protótipo com Animação</title>
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1 class="page-title">Portfólio Virtual</h1>
+
+  <div class="nav">
+    <div class="block" data-target="sobre">Sobre Mim</div>
+    <div class="block" data-target="Formação">Formação</div>
+    <div class="block" data-target="Portfólio">Portfólio</div>
+    <div class="block" data-target="Contato">Contato</div>
+  </div>
+
+  <div id="sobre" class="content-block">
+    <p>Meu nome é Guilherme Marinho Magalhães, sou nativo de Governador Valadares, Minas Gerais.</p>
+    <p>No âmbito de interesses, posso dizer que meus gostos variam bastante, tenho vários hobbies, por exemplo, que deixam o meu dia mais interessante.</p>
+        Como hobbies principais posso mencionar artes marciais, especificamente o Muay Thai, que amo praticar toda semana, também tenho grande interesse em livros e jogos
+        (especificamente de ficção científica e terror), e amo cozinhar! Sempre que consigo, claro.
+        <p>Me considero como uma pessoa reservada, mas ainda sim, extrovertida, amo sair para conhecer pessoas novas e praticar esportes ao ar livre sempre que posso.</p> 
+  </div>
+
+  <div id="Formação" class="content-block">
+    <p> Atualmente estou cursando Engenharia de Software na faculdade Uninter.</p>
+    <p> Sou formado no Ensino Médio na Escola Estadual Professor Paulo Freire.</p>
+    <p> Fluente em Inglês como segunda língua, considerado C2 por avaliações de proficiência realizadas anteriormente.</p>
+    <p> Experiência de trabalho intensiva com o uso da língua Inglesa, 3 anos de experiência trabalhando como freelancer e agente bilíngue para uma legal firm da Inglaterra (Pogust Goodhead).</p>
+    <p> Foco de trabalho em ambientes de escritório, administrando planilhas, fazendo chamadas e enviando emails em ambas as línguas. </p>
+  
+  </div>
+
+  <div id="Portfólio" class="content-block">
+    <p>Minha conta do Github: https://github.com/gm604494-dotcom</p>
+    <p>Abaixo você poderá encontrar links para todos os meus projetos anteriores e protótipos:</p> 
+    <p>https://gm604494-dotcom.github.io/Prototipo-trabalho/
+      
+    </p>
+  </div>
+
+  <div id="Contato" class="content-block">
+    <p>Muay Thai, leitura, jogos e culinária são minhas paixões.</p>
+  </div>
+
+  <script>
+    const blocks = document.querySelectorAll('.block');
+    const contents = document.querySelectorAll('.content-block');
+
+    blocks.forEach(block => {
+      block.addEventListener('click', () => {
+        const targetId = block.getAttribute('data-target');
+
+        contents.forEach(content => {
+          if (content.id === targetId) {
+            content.classList.toggle('visible');
+          } else {
+            content.classList.remove('visible');
+          }
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
