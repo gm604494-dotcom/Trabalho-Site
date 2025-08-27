@@ -38,17 +38,35 @@
     <p>Minha conta do Github: https://github.com/gm604494-dotcom</p>
     <p>Abaixo você poderá encontrar links para todos os meus projetos anteriores e protótipos:</p> 
     <p>https://gm604494-dotcom.github.io/Prototipo-trabalho/
-      
-    </p>
+    
+    </p> 
   </div>
 
   <div id="Contato" class="content-block">
-    <p>Muay Thai, leitura, jogos e culinária são minhas paixões.</p>
+    <p>Meu email de contato pessoal é: gm604494@gmail.com, e meu número para contato é 33987628674.</p>
+    <form class="contact-form">
+  <label for="name">Seu Nome:</label>
+  <input type="text" id="name" name="name" placeholder="Digite seu nome" required>
+
+  <label for="email">Seu Email:</label>
+  <input type="email" id="email" name="email" placeholder="exemplo@dominio.com" required>
+
+  <label for="mensagem">Sua Mensagem:</label>
+  <textarea id="mensagem" name="mensagem" rows="4" placeholder="Digite sua mensagem aqui..." required></textarea>
+
+  <button type="submit">Enviar Mensagem</button>
+</form>
   </div>
 
   <script>
     const blocks = document.querySelectorAll('.block');
     const contents = document.querySelectorAll('.content-block');
+
+    document.querySelector('.contact-form')?.addEventListener('submit', function (e) {
+  e.preventDefault(); // não manda um form de verdade
+  alert('Mensagem enviada!');
+  this.reset(); // limpa
+});
 
     blocks.forEach(block => {
       block.addEventListener('click', () => {
